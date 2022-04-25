@@ -1,25 +1,21 @@
 # Написать программу проверки, является ли строка палиндромом
 
 str = 'texet'
-
-# if str
+# str = 'tex1et'
 
 average = (len(str) + 1) // 2
-# print((len(str) + 1) // 2)
-
 i = 0
+bool_check = False
+
 while i <= average:
     if str[i] == str[len(str) - (i + 1)]:
-        print('Проверка прошла')
         i += 1
+        bool_check = True
     else:
-        print('Не палидром')
+        bool_check = False
         break
 
-
-exit()
-i = 1
-while i <= len(str):
-    print(str[len(str) - i], end=' ')
-    # print(len(str))
-    i += 1
+if bool_check == True:
+    print('Палидром')
+else:
+    print('Не палидром')
